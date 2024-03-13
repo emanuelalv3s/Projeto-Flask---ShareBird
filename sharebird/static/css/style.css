@@ -1,0 +1,401 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Montserrat;
+  color: #104372;
+}
+
+nav {
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+h1, h2, a {
+  color: #104372;
+  font-size: 20px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  display: inline;
+}
+
+
+img {
+  width: 100%;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.logo-pinterest {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  column-gap: 4px;
+
+  transition-property: transform;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+  transition-delay: 0s;
+
+}
+
+.logo-pinterest:hover {
+transform: translateY(-3px);
+}
+
+.logo_bird {
+  /*transform: translateY(-5px);*/
+  border: 2px solid #333;
+}
+
+.link-nav {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  text-decoration: none;
+}
+
+.link-nav:hover {
+  text-decoration: underline;
+}
+
+.restante-nav {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+  width: fit-content;
+}
+
+.container-login {
+  padding-bottom: 100px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative; /* Adicionado para permitir posicionamento absoluto */
+}
+
+.bg-imagem-sharebird {
+  width: 100%;
+  position: fixed;
+  top: 40px;
+
+}
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.container-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    z-index: 999; /* Define uma ordem de empilhamento para garantir que o popup esteja acima de outros elementos */
+    overflow: hidden; /* Esconde o conteúdo que excede os limites do container */
+    box-sizing: border-box; /* Inclui o padding e a borda no cálculo da largura e altura */
+}
+
+.popup {
+  /* display: none !important; */
+  width: 400px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 20px;
+  padding: 35px;
+  border-radius: 32px;
+  background-color: #fff;
+  position: relative; /* Adicionado para permitir posicionamento do ícone */
+}
+
+.div-input {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 5px;
+}
+
+.div-botao {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 5px;
+  margin-top: 10px;
+}
+
+.label {
+  margin-right: auto;
+  margin-left: 15px;
+  font-size: 15px;
+}
+
+.input {
+  width: 100%;
+  font-size: 16px;
+  padding: 15px;
+  border: 2px solid #cdcdcd;
+  border-radius: 20px;
+  box-sizing: border-box;
+  font-family: Montserrat;
+}
+
+.botao-login {
+  border-radius: 25px;
+  padding: 10px 15px;
+  width: 100%;
+  border: 0;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #104372;
+  color: #fff;
+
+  transition-property: transform;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+  transition-delay: 0s;
+
+}
+
+.botao-login:hover{
+  background-color: #0E3B64;
+  transform: translateY(-5px);
+}
+
+.link-criarconta {
+  color: #333;
+  text-decoration: none;
+}
+
+.link-criarconta:hover {
+  color: #333;
+  text-decoration: underline;
+}
+
+.botao-perfil a {
+  background-color: #104372;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+}
+
+.botao-perfil a:hover {
+  background-color: #0E3B64;
+  text-decoration: none;
+}
+
+.botao-sair a {
+  background-color: #777;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+}
+
+.botao-sair a:hover {
+  background-color: #707070;
+  text-decoration: none;
+}
+
+.botao-login-home a {
+  background-color: #104372;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+}
+
+.botao-login-home a:hover {
+  background-color: #0E3B64;
+  text-decoration: none;
+}
+
+.botao-criar-conta a {
+  background-color: #777;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+}
+
+.botao-criar-conta a:hover {
+  background-color: #707070;
+  text-decoration: none;
+}
+
+
+
+.conteudo {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  width: 100%;
+  max-width: 100vw;
+  column-gap: 10px;
+  row-gap: 30px;
+  padding: 15px;
+  box-sizing: border-box;
+
+}
+
+.bloco-imagem img {
+  border-radius: 20px;
+  height: 40vh;
+  object-fit: cover;
+}
+
+.bloco-add-img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 10px;
+}
+
+
+.botao-arquivo {
+  padding: 5px 10px;
+  border-radius: 15px;
+  border: 0;
+  background-color: #333;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.bloco-arquivo {
+  background-color: #eee;
+  padding: 10px 20px;
+  border-radius: 55px;
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+
+.input-arquivo {
+  display: none;
+}
+
+#imagem-arquivo {
+  display: none;
+}
+
+#imagem-arquivo.visivel {
+  display: inline-block;
+}
+
+.bloco-add-img .botao-login {
+  width: auto;
+}
+
+.bloco-input-botao {
+  display: flex;
+  column-gap: 20px;
+}
+
+
+.password-input-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+     row-gap: 5px;
+}
+
+.toggle-password {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.input[type="password"] {
+    padding-right: 30px; /* Para deixar espaço para o ícone de olho */
+}
+
+
+.bloco-imagem {
+    position: relative; /* Necessário para posicionar o nome do usuário */
+    display: inline-block;
+  }
+
+.bloco-imagem:hover {
+    filter: brightness(0.6); /* Reduz o brilho da imagem ao passar o mouse */
+}
+
+
+.nome-usuario {
+    position: absolute;
+    top: 50%; /* Posiciona o nome do usuário no centro verticalmente */
+    left: 50%; /* Posiciona o nome do usuário no centro horizontalmente */
+    transform: translate(-50%, -50%); /* Move o nome do usuário para o centro da imagem */
+    color: white; /* Cor do texto do nome do usuário */
+    padding: 10px; /* Espaçamento interno do nome do usuário */
+    font-size: 30px; /* Tamanho da fonte do nome do usuário */
+    display: none; /* Oculta o nome do usuário por padrão */
+
+    background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo do nome do usuário */
+    border-radius:25px;
+ }
+
+.bloco-imagem:hover .nome-usuario {
+    display: block; /* Exibe o nome do usuário ao passar o mouse sobre a imagem */
+}
+
+/* Estilos do Rodapé
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #104372;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+*/
+footer {
+    background-color: #104372;
+    color: white;
+    text-align: center;
+    padding: 5px 0;
+    bottom: 0;
+    width: 100%;
+}
+
+/* icone de fechar o container login e criar conta #999*/
+.close-icon {
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #999;
+
+}
+
+.close-icon:hover {
+    color: #666;
+}
+
+.fancybox-slide img{
+    border-radius: 20px;
+}
+
+
+

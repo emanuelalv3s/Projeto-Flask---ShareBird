@@ -1,0 +1,35 @@
+<!--
+<nav>
+
+    <a href="{{ url_for('homepage') }}"><img src="{{ url_for('static', filename='site.ico') }}" alt="Ícone">ShareBird</a>
+    <a href="{{ url_for('feed') }}">Feed</a>
+    <a href="{{ url_for('perfil', id_usuario=current_user.id) }}">Meu Perfil</a>
+    <a href="{{ url_for('logout') }}">SAIR</a>
+
+</nav>
+-->
+
+<header>
+    <nav>
+        <a href="{{ url_for('feed') }}" class="logo-pinterest" style="text-decoration: none;">
+            <svg
+            height="50"
+            viewBox="-3 -3 82 82"
+            width="50"
+            style="display: block"
+          >
+            <title>ShareBird logo</title>
+            <circle cx="38" cy="38" fill="white" r="40"></circle>
+            <a href="{{ url_for('homepage') }}"><image xlink:href="{{ url_for('static', filename='site.png') }}" x="0" y="0" width="76" height="76" /></a>
+          </svg>
+            <h1>ShareBird</h1>
+          </a>
+
+          <div class="restante-nav">
+            <p class="botao-perfil"><a href="{{ url_for('perfil', id_usuario=current_user.id) }}" class="link-nav">Perfil</a></p>
+              <p class="botao-sair"><a href="{{ url_for('logout') }}" class="link-nav">Sair</a></p>
+        </div>
+
+
+    </nav>
+</header>

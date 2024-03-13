@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" href="{{ url_for('static', filename='site.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
+    <!-- Inclua a biblioteca jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+
+    <title>
+{% block titulo %}
+    ShareBird
+{% endblock %}
+    </title>
+  </head>
+
+{% block body %}
+
+  <body class="overflow-hidden">
+
+      <header>
+        <nav>
+          <a href="{{ url_for('homepage') }}" class="logo-pinterest" style="text-decoration: none;">
+            <svg
+            height="45"
+            viewBox="-3 -3 82 82"
+            width="45"
+            style="display: block"
+          >
+            <title>ShareBird logo</title>
+            <circle cx="38" cy="38" fill="white" r="40"></circle>
+            <a href="{{ url_for('homepage') }}"><image xlink:href="{{ url_for('static', filename='site.png') }}" x="0" y="0" width="76" height="76" /></a>
+          </svg>
+            <h1>ShareBird</h1>
+          </a>
+
+          <div class="restante-nav">
+
+
+            <a href="{{ url_for('feed') }}" class="link-nav">Feed Principal</a>
+
+            <a href="" class="link-nav">Business</a>
+            <a href="" class="link-nav">Blog</a>
+
+            <p class="botao-login-home"><a href="{{ url_for('login') }}" class="link-nav">Entrar</a></p>
+            <p class="botao-criar-conta"><a href="{{ url_for('criar_conta') }}" class="link-nav">Criar Conta</a></p>
+
+          </div>
+        </nav>
+      </header>
+
+ <div class="slideshow-container">
+        <div class="slide fade">
+            <img src="{{ url_for('static', filename='fotos_site/fundo.png') }}" alt="Slide 1">
+        </div>
+
+ </div>
+
+ <script>
+
+
+
+ </script>
+
+
+
+  </body>
+{% endblock %}
+</html>
